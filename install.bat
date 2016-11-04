@@ -46,7 +46,7 @@ choco install windirstat
 choco install sysinternals
 choco install procexp
 choco install procmon
-choco install powershell poshgit
+choco install poshgit
 choco install autoruns
 
 choco install ruby ruby2.devkit
@@ -76,9 +76,6 @@ choco install teamviewer
 choco install vlc
 choco install honeyview
 
-choco install veracrypt
-rem choco install truecrypt
-
 choco install owncloud-client
 choco install virtualbox virtualbox.extensionpack
 choco install postgresql-9.5 pgadmin3
@@ -97,15 +94,17 @@ choco install adobereader
 
 goto END
 
-Final notes
+rem These packages require manual intervention
+choco install veracrypt
 
- * http://tech.brookins.info/2015/11/07/my-git-setup-in-windows.html
 
-Add C:\ProgramData\chocolatey\lib\python3\tools\Scripts to PATH
-Admin: pip install pygments
-(OR: C:\ProgramData\chocolatey\lib\python3\tools\Scripts\pip install pygments)
+rem Final notes
+rem http://tech.brookins.info/2015/11/07/my-git-setup-in-windows.html
+rem Add C:\ProgramData\chocolatey\lib\python3\tools\Scripts to PATH
+rem Admin: pip install pygments
+rem (OR: C:\ProgramData\chocolatey\lib\python3\tools\Scripts\pip install pygments)
 
-Manually: msys2
+rem Manually: msys2
 
 :END
 echo To keep your system updates, run update-all.bat regularly from an administrator CMD.exe
