@@ -116,3 +116,5 @@ rem Manually: msys2
 
 :END
 echo To keep your system updates, run update-all.bat regularly from an administrator CMD.exe
+echo .
+echo Please follow the steps described at https://conemu.github.io/en/DefaultTerminal.html#Description
