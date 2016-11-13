@@ -49,7 +49,7 @@ choco install procmon
 choco install poshgit
 choco install autoruns
 
-choco install ruby ruby2.devkit
+choco install ruby
 choco install python2
 
 choco install miktex
@@ -91,6 +91,14 @@ choco install synctrayzor
 
 rem requires restart
 choco install adobereader
+
+choco install ruby2.devkit
+rem Apply steps from https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
+echo "- C:/tools/ruby23" >> C:\tools\DevKit2\config.yml
+cd C:\tools\DevKit2
+call refreshenv
+ruby dk.rb init
+ruby dk.rb install
 
 goto END
 
