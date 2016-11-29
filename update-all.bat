@@ -14,6 +14,6 @@ echo Updating all packages...
 call choco upgrade all
 echo.
 echo Updating all MiKTeX packages
-call mpm --update-db
-call mpm --update
+call mpm --verbose --update-db
+call mpm --verbose --update
 call initexmf --update-fndb
