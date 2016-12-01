@@ -24,6 +24,7 @@ choco install classic-shell
 choco install QTTabBar
 
 choco install git.install /GitAndUnixToolsOnPath
+git config --global diff.indentHeuristic true
 git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
