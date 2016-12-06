@@ -94,11 +94,11 @@ rem requires restart
 choco install adobereader
 
 choco install ruby2.devkit
+call refreshenv
 rem Apply steps from https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
+ruby dk.rb init
 echo "- C:/tools/ruby23" >> C:\tools\DevKit2\config.yml
 cd C:\tools\DevKit2
-call refreshenv
-ruby dk.rb init
 ruby dk.rb install
 
 goto END
