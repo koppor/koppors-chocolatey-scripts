@@ -102,6 +102,10 @@ call refreshenv
 ruby dk.rb init
 ruby dk.rb install
 
+choco install docker
+choco pin add -n=docker
+
+
 goto END
 
 rem These packages require manual intervention
