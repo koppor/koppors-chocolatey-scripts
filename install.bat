@@ -24,6 +24,7 @@ choco install classic-shell
 choco install QTTabBar
 
 choco install git.install /GitAndUnixToolsOnPath
+git config --global diff.indentHeuristic true
 git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
@@ -95,11 +96,11 @@ rem requires restart
 choco install adobereader
 
 choco install ruby2.devkit
+call refreshenv
 rem Apply steps from https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
+ruby dk.rb init
 echo "- C:/tools/ruby23" >> C:\tools\DevKit2\config.yml
 cd C:\tools\DevKit2
-call refreshenv
-ruby dk.rb init
 ruby dk.rb install
 
 choco install docker
