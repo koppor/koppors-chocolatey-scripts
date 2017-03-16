@@ -89,6 +89,7 @@ rem interactive
 rem choco install windowsessentials
 
 choco install synctrayzor
+choco pin add -n=synctrayzor
 
 rem requires restart
 choco install adobereader
