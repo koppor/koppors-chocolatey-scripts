@@ -48,7 +48,8 @@ choco install windirstat
 choco install sysinternals
 choco install procexp
 choco install procmon
-choco install poshgit
+rem disabled, because it depends on powershell, which is provided by Windows itself
+rem choco install poshgit
 choco install autoruns
 
 choco install ruby
