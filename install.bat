@@ -1,9 +1,24 @@
 @echo off
 rem Browse https://chocolatey.org/packages for packages
 
-rem Install chocolatey and disable the y/n prompts
-powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
-choco feature enable -n=allowGlobalConfirmation
+echo Install chocolatey and disable the y/n prompts manually by executing following commands:
+echo powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+echo choco feature enable -n=allowGlobalConfirmation
+echo .
+echo Reopen the shell afterwards
+echo Disable any proxy in the Internet Explorer Network settings.
+echo .
+echo Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template#recommended-setup-of-miktex
+pause
+
+choco install git.install /GitAndUnixToolsOnPath
+call refreshenv
+git config --global diff.indentHeuristic true
+git config --global color.diff.new "green bold"
+git config --global color.status.updated "green bold"
+git config --global color.branch.current "green bold"
+git config --global core.longpaths true
+choco install tortoisegit
 
 choco install dropbox
 choco install keepass
@@ -23,20 +38,11 @@ choco install notepadplusplus
 choco install classic-shell
 choco install QTTabBar
 
-choco install git.install /GitAndUnixToolsOnPath
-git config --global diff.indentHeuristic true
-git config --global color.diff.new "green bold"
-git config --global color.status.updated "green bold"
-git config --global color.branch.current "green bold"
-git config --global core.longpaths true
-choco install tortoisegit
-
 choco install putty.install
 choco install winscp.install
 choco install tortoisesvn
 
 choco install jdk8 jre8
-choco install play
 choco install intellijidea-ultimate
 choco pin add -n=intellijidea-ultimate
 
@@ -55,29 +61,21 @@ choco install autoruns
 choco install ruby
 choco install python2
 
-choco install miktex
-choco pin add -n=miktex
 choco install strawberryperl python3
 choco install texstudio
 choco install sumatrapdf.install
 choco install jabref
-choco install pandoc
 
 choco install 7zip
 choco install nodejs.install
 choco install jsonedit
-choco install xmlstarlet
-choco install jq
 choco install fiddler4
 choco install winmerge
 choco install ack
 
-choco install paint.net
-choco install foobar2000 opencodecs
 choco install f.lux
 choco install teamviewer
 choco install vlc
-choco install honeyview
 
 choco install owncloud-client
 choco install virtualbox virtualbox.extensionpack
@@ -90,12 +88,6 @@ choco install nk2edit.install
 rem interactive
 rem choco install windowsessentials
 
-choco install synctrayzor
-choco pin add -n=synctrayzor
-
-rem requires restart
-choco install adobereader
-
 choco install ruby2.devkit
 call refreshenv
 rem Apply steps from https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
@@ -107,12 +99,26 @@ ruby dk.rb install
 choco install docker
 choco pin add -n=docker
 
+rem requires restart
+choco install adobereader
+
 
 goto END
 
 rem These packages require manual intervention
 choco install veracrypt
 
+rem koppor's special tools
+choco install paint.net
+choco install foobar2000 opencodecs
+choco install honeyview
+
+rem koppor's very special tools
+choco install pandoc
+choco install xmlstarlet
+choco install jq
+choco install synctrayzor
+choco pin add -n=synctrayzor
 
 rem Final notes
 rem http://tech.brookins.info/2015/11/07/my-git-setup-in-windows.html
