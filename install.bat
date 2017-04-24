@@ -74,6 +74,7 @@ choco install winmerge
 choco install ack
 
 choco install f.lux
+choco pin add -n=f.lux
 choco install teamviewer
 choco install vlc
 
