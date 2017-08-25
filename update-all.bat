@@ -17,3 +17,4 @@ echo Updating all MiKTeX packages
 call mpm --verbose --update-db
 call mpm --verbose --update
 call initexmf --update-fndb
+call initexmf --mklinks --force
