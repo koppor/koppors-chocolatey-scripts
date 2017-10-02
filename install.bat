@@ -18,6 +18,7 @@ git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
 git config --global core.longpaths true
+choco install git-lfs.install
 choco install tortoisegit
 
 choco install dropbox
