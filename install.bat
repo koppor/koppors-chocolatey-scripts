@@ -68,7 +68,7 @@ choco install sumatrapdf.install
 choco install jabref
 
 choco install 7zip
-choco install nodejs.install
+choco install nodejs-lts
 choco install jsonedit
 choco install fiddler4
 choco install winmerge
