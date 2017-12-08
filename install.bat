@@ -1,18 +1,24 @@
 @echo off
 rem Browse https://chocolatey.org/packages for packages
 
+echo Open another admin console and follow folling steps
+echo .
 echo Install chocolatey and disable the y/n prompts manually by executing following commands:
+echo .
 echo powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 echo choco feature enable -n=allowGlobalConfirmation
 echo .
-echo Reopen the shell afterwards
-echo Disable any proxy in the Internet Explorer Network settings.
+echo If at university, disable any proxy in the Internet Explorer Network settings.
 echo .
-echo Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template#recommended-setup-of-miktex
+echo Install git:
+echo choco install git.install /GitAndUnixToolsOnPath
+echo Optional: Afterwards, follow the instructions at https://github.com/tj/git-extras/blob/master/Installation.md#windows to install git-extras
+echo .
+echo Optional: Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template#recommended-setup-of-miktex
+echo .
+echo After that succeeded, open another admin console and execute this script again
 pause
 
-choco install git.install /GitAndUnixToolsOnPath
-call refreshenv
 git config --global diff.indentHeuristic true
 git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
