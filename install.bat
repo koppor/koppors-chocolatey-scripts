@@ -19,6 +19,8 @@ git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
 git config --global core.longpaths true
 choco install git-lfs.install
+rem see https://github.com/github/hub for more information on this git tool
+choco install hub
 choco install tortoisegit
 
 choco install dropbox
