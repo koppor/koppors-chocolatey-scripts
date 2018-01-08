@@ -1,30 +1,26 @@
 @echo off
-rem Browse https://chocolatey.org/packages for packages
 
-echo Open another admin console and follow folling steps
+echo This will first install chocolatey, then other tools
 echo .
-echo Install chocolatey and disable the y/n prompts manually by executing following commands:
+echo Browse https://chocolatey.org/packages for packages
 echo .
-echo powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
-echo choco feature enable -n=allowGlobalConfirmation
+echo Ensure that your cmd.exe runs as Administrator
 echo .
 echo If at university, disable any proxy in the Internet Explorer Network settings.
 echo .
-echo Install git:
-echo choco install git.install /GitAndUnixToolsOnPath
-echo Optional: Afterwards, follow the instructions at https://github.com/tj/git-extras/blob/master/Installation.md#windows to install git-extras
-echo .
-echo Optional: Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template#recommended-setup-of-miktex
-echo .
-echo After that succeeded, open another admin console and execute this script again
 pause
+choco install git.install /GitAndUnixToolsOnPath
+echo .
 
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+choco feature enable -n=allowGlobalConfirmation
 git config --global diff.indentHeuristic true
 git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
 git config --global core.longpaths true
 choco install git-lfs.install
+
 rem see https://github.com/github/hub for more information on this git tool
 choco install hub
 choco install tortoisegit
@@ -74,6 +70,7 @@ choco install strawberryperl python3
 choco install texstudio
 choco install sumatrapdf.install
 choco install jabref
+choco isntall imagemagick
 
 choco install 7zip
 choco install nodejs-lts
@@ -139,6 +136,12 @@ rem (OR: C:\ProgramData\chocolatey\lib\python3\tools\Scripts\pip install pygment
 rem Manually: msys2
 
 :END
+
 echo To keep your system updates, run update-all.bat regularly from an administrator CMD.exe
 echo .
 echo Please follow the steps described at https://conemu.github.io/en/DefaultTerminal.html#Description
+echo .
+echo Optional: Afterwards, follow the instructions at https://github.com/tj/git-extras/blob/master/Installation.md#windows to install git-extras
+echo Optional: Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template#recommended-setup-of-miktex
+echo .
+pause
