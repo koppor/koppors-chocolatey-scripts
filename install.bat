@@ -23,6 +23,7 @@ choco install git-lfs.install
 
 rem see https://github.com/github/hub for more information on this git tool
 choco install hub
+choco install github-desktop
 choco install tortoisegit
 
 choco install dropbox
