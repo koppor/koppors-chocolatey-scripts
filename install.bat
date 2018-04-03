@@ -9,11 +9,18 @@ echo .
 echo If at university, disable any proxy in the Internet Explorer Network settings.
 echo .
 pause
-choco install git.install /GitAndUnixToolsOnPath
 echo .
 
 powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 choco feature enable -n=allowGlobalConfirmation
+pause
+
+echo Now chocolatey should be ready and we can go ahead
+echo .
+pause
+
+choco install git.install /GitAndUnixToolsOnPath
+call refreshenv
 git config --global diff.indentHeuristic true
 git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
@@ -110,7 +117,6 @@ choco pin add -n=docker
 rem requires restart
 choco install adobereader
 
-
 goto END
 
 rem These packages require manual intervention
@@ -138,7 +144,7 @@ rem Manually: msys2
 
 :END
 
-echo To keep your system updates, run update-all.bat regularly from an administrator CMD.exe
+echo To keep your system updated, run update-all.bat regularly from an administrator CMD.exe.
 echo .
 echo Please follow the steps described at https://conemu.github.io/en/DefaultTerminal.html#Description
 echo .
