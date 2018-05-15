@@ -47,9 +47,12 @@ rem enable normal files also to be treated as executable - see https://github.co
 rem clink set exec_match_style -1
 
 choco install autohotkey.install
-choco install notepadplusplus
 choco install classic-shell
 choco install QTTabBar
+
+choco install notepadplusplus
+choco install vscode
+choco pin add -n vscode
 
 choco install putty.install
 choco install winscp.install
