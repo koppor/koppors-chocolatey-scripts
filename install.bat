@@ -117,6 +117,9 @@ ruby dk.rb install
 choco install docker
 choco pin add -n=docker
 
+rem This allows to burn ISOs - see https://rufus.akeo.ie/
+choco install rufus
+
 rem requires restart
 choco install adobereader
 
