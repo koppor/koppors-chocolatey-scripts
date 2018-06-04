@@ -59,8 +59,8 @@ choco install winscp.install
 choco install tortoisesvn
 
 choco install jdk8 jre8
-choco install intellijidea-ultimate
-choco pin add -n=intellijidea-ultimate
+choco install jetbrainstoolbox
+choco pin add -n=jetbrainstoolbox
 
 choco install skype
 choco install pdfcreator
