@@ -26,6 +26,10 @@ git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
 git config --global core.longpaths true
+git config --global core.preloadindex true
+git config --global core.fscache true
+git config --global gc.auto 256
+git config --global core.commitGraph true
 choco install git-lfs.install
 
 rem see https://github.com/github/hub for more information on this git tool
@@ -48,7 +52,8 @@ rem clink set exec_match_style -1
 
 choco install autohotkey.install
 choco install classic-shell
-choco install QTTabBar
+rem Needs to be installed after a reboot
+rem choco install QTTabBar
 
 choco install notepadplusplus
 choco install vscode
@@ -70,14 +75,13 @@ choco install windirstat
 choco install sysinternals
 choco install procexp
 choco install procmon
-rem disabled, because it depends on powershell, which is provided by Windows itself
-rem choco install poshgit
 choco install autoruns
 
-choco install ruby
-choco install python2
+rem disabled, because it depends on powershell, which is provided by Windows itself
+rem choco install poshgit
 
-choco install strawberryperl python3
+choco install strawberryperl python2 python3
+choco install ruby
 choco install texstudio
 choco install sumatrapdf.install
 choco install jabref
@@ -95,24 +99,11 @@ choco pin add -n=f.lux
 choco install teamviewer
 choco install vlc
 
-choco install owncloud-client
-choco install virtualbox virtualbox.extensionpack
-choco install postgresql-9.5 pgadmin3
-
-rem choco install officeproplus2013
 rem enable editing the Outlook auto completion
 choco install nk2edit.install
 
 rem interactive
 rem choco install windowsessentials
-
-choco install ruby2.devkit
-call refreshenv
-rem Apply steps from https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
-ruby dk.rb init
-echo "- C:/tools/ruby23" >> C:\tools\DevKit2\config.yml
-cd C:\tools\DevKit2
-ruby dk.rb install
 
 choco install docker
 choco pin add -n=docker
@@ -129,7 +120,10 @@ rem These packages require manual intervention
 choco install veracrypt
 
 rem koppor's special tools
-choco install paint.net
+
+rem Available through the Windows store
+rem choco install paint.net
+
 choco install foobar2000 opencodecs
 choco install honeyview
 
