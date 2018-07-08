@@ -121,9 +121,6 @@ choco install veracrypt
 
 rem koppor's special tools
 
-rem Available through the Windows store
-rem choco install paint.net
-
 choco install foobar2000 opencodecs
 choco install honeyview
 
@@ -134,12 +131,6 @@ choco install jq
 choco install synctrayzor
 choco pin add -n=synctrayzor
 
-rem Final notes
-rem http://tech.brookins.info/2015/11/07/my-git-setup-in-windows.html
-rem Add C:\ProgramData\chocolatey\lib\python3\tools\Scripts to PATH
-rem Admin: pip install pygments
-rem (OR: C:\ProgramData\chocolatey\lib\python3\tools\Scripts\pip install pygments)
-
 rem Manually: msys2
 
 :END
@@ -148,6 +139,9 @@ echo To keep your system updated, run update-all.bat regularly from an administr
 echo .
 echo Please follow the steps described at https://conemu.github.io/en/DefaultTerminal.html#Description
 echo .
+echo Follow the steps described at http://tech.brookins.info/2015/11/07/my-git-setup-in-windows.html to get git running with putty and an SSH key
+echo Install "Snipaste" from the Windows Store
+echo Optional: Install "paint.net" from the Windows Store
 echo Optional: Afterwards, follow the instructions at https://github.com/tj/git-extras/blob/master/Installation.md#windows to install git-extras
 echo Optional: Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template#recommended-setup-of-miktex
 echo .
