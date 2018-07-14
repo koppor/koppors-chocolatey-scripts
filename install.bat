@@ -105,8 +105,8 @@ choco install nk2edit.install
 rem interactive
 rem choco install windowsessentials
 
-choco install docker
-choco pin add -n=docker
+choco install docker-for-windows 
+choco pin add -n=docker-for-windows 
 
 rem This allows to burn ISOs - see https://rufus.akeo.ie/
 choco install rufus
