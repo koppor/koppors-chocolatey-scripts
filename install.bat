@@ -33,7 +33,7 @@ git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
 rem always have Linux line endings in text files
-git config --global autocrlf=input
+git config --global core.autocrlf input
 
 rem see https://github.com/github/hub for more information on this git tool
 choco install hub
