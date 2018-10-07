@@ -19,7 +19,7 @@ echo Now chocolatey should be ready and we can go ahead
 echo .
 pause
 
-choco install git.install /GitAndUnixToolsOnPath
+choco install git.install -y --params "/GitAndUnixToolsOnPath /NoAutoCrlf /WindowsTerminal"
 call refreshenv
 rem performance tweaks
 git config --global core.commitGraph true
@@ -34,7 +34,6 @@ git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
 rem always have Linux line endings in text files
 git config --global autocrlf=input
-choco install git-lfs.install
 
 rem see https://github.com/github/hub for more information on this git tool
 choco install hub
