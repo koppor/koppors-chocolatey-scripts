@@ -54,7 +54,7 @@ rem enable normal files also to be treated as executable - see https://github.co
 rem clink set exec_match_style -1
 
 choco install autohotkey.install
-choco install classic-shell
+choco install open-shell
 rem Needs to be installed after a reboot
 rem choco install QTTabBar
 
