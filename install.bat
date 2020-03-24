@@ -21,19 +21,20 @@ pause
 
 choco install git.install -y --params "/GitAndUnixToolsOnPath /NoAutoCrlf /WindowsTerminal"
 call refreshenv
-rem performance tweaks
-git config --global core.commitGraph true
+rem always have Linux line endings in text files
+git config --global core.autocrlf input
+rem support more than 260 characters on Windows
+rem See https://stackoverflow.com/a/22575737/873282 for details
 git config --global core.longpaths true
-git config --global core.preloadindex true
-git config --global core.fscache true
-git config --global gc.auto 256
 rem some color and diff tweaks
-git config --global diff.indentHeuristic true
+rem   Use SVN's ||| also in git
+rem   See https://git-scm.com/docs/git-config#Documentation/git-config.txt-mergeconflictStyle for details
+git config --global merge.configStyle "diff3"
 git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
-rem always have Linux line endings in text files
-git config --global core.autocrlf input
+rem Sort branches at "git branch -v" by committer date
+git config --global branch.sort -committerdate
 
 rem see https://github.com/github/hub for more information on this git tool
 choco install hub
