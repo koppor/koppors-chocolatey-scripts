@@ -69,9 +69,6 @@ choco install clink
 rem enable normal files also to be treated as executable - see https://github.com/mridgers/clink/issues/311#issuecomment-95330570
 rem clink set exec_match_style -1
 
-rem advanced grep
-choco install ack
-
 choco install autohotkey.install
 
 rem https://github.com/Open-Shell/Open-Shell-Menu
@@ -82,8 +79,9 @@ rem choco install QTTabBar
 
 choco install notepadplusplus
 
-choco install skype
-choco pin add -n=skype
+rem Skype is included in Windows 10 - no need to install it
+rem choco install skype
+rem choco pin add -n=skype
 
 choco install 7zip
 
@@ -98,7 +96,7 @@ choco install libericajdk
 choco install jetbrainstoolbox
 choco pin add -n=jetbrainstoolbox
 
-choco install pdfcreator
+rem choco install pdfcreator
 
 choco install lockhunter
 
@@ -108,6 +106,9 @@ choco install sysinternals
 choco install powertoys
 choco install procexp
 choco install procmon
+
+rem This is interactive - therefore no installation
+rem choco install windowsessentials
 
 choco install autoruns
 
@@ -137,16 +138,16 @@ choco install vlc
 rem enable editing the Outlook auto completion
 choco install nk2edit.install
 
-rem interactive
-rem choco install windowsessentials
-
 choco install docker-for-windows 
 choco pin add -n=docker-for-windows 
 
 rem This allows to burn ISOs - see https://rufus.akeo.ie/
-choco install rufus
+rem choco install rufus
 
 choco install totalcommander
+
+rem advanced grep
+choco install ack
 
 rem requires restart
 choco install adobereader
