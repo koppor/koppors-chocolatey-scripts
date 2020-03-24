@@ -39,14 +39,19 @@ git config --global branch.sort -committerdate
 rem see https://github.com/github/hub for more information on this git tool
 choco install hub
 
+rem Nice UI from GitHub
+rem Currently not used
 rem choco install github-desktop
 
+rem This is an alternative GUI for git
+rem Typically slows down Windows Explorer, so  not installed
 rem choco install tortoisegit
 
 rem PowerShell environment for Git - http://dahlbyk.github.io/posh-git/
 rem disabled, because it depends on powershell, which is provided by Windows itself
 rem choco install poshgit
 
+rem In case one (still) owns SVN repositories
 rem choco install tortoisesvn
 
 choco install dropbox
@@ -78,6 +83,9 @@ rem Needs to be installed after a reboot
 rem choco install QTTabBar
 
 choco install notepadplusplus
+
+rem Advanced search for file names - https://www.voidtools.com/
+choco install everything
 
 rem Skype is included in Windows 10 - no need to install it
 rem choco install skype
