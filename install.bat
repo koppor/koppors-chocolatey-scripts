@@ -38,10 +38,19 @@ git config --global branch.sort -committerdate
 
 rem see https://github.com/github/hub for more information on this git tool
 choco install hub
-choco install github-desktop
-choco install tortoisegit
+
+rem choco install github-desktop
+
+rem choco install tortoisegit
+
+rem PowerShell environment for Git - http://dahlbyk.github.io/posh-git/
+rem disabled, because it depends on powershell, which is provided by Windows itself
+rem choco install poshgit
+
+rem choco install tortoisesvn
 
 choco install dropbox
+
 choco install keepass
 
 choco install firefox flashplayerplugin
@@ -50,57 +59,79 @@ choco pin add -n=firefox
 choco install googlechrome
 choco pin add -n=googlechrome
 
-choco install conemu clink
+rem Enable tabbed terminal
+rem https://conemu.github.io/
+choco install conemu
+
+rem Enable bash shortcuts
+rem https://mridgers.github.io/clink/
+choco install clink
 rem enable normal files also to be treated as executable - see https://github.com/mridgers/clink/issues/311#issuecomment-95330570
 rem clink set exec_match_style -1
 
+rem advanced grep
+choco install ack
+
 choco install autohotkey.install
+
+rem https://github.com/Open-Shell/Open-Shell-Menu
 choco install open-shell
+
 rem Needs to be installed after a reboot
 rem choco install QTTabBar
 
 choco install notepadplusplus
+
+choco install skype
+choco pin add -n=skype
+
+choco install 7zip
+
 choco install vscode
 choco pin add -n vscode
 
 choco install putty.install
 choco install winscp.install
-choco install tortoisesvn
 
-choco install jdk8 jre8
+choco install libericajdk
+
 choco install jetbrainstoolbox
 choco pin add -n=jetbrainstoolbox
 
-choco install skype
 choco install pdfcreator
 
 choco install lockhunter
+
 choco install windirstat
+
 choco install sysinternals
+choco install powertoys
 choco install procexp
 choco install procmon
-choco install autoruns
 
-rem disabled, because it depends on powershell, which is provided by Windows itself
-rem choco install poshgit
+choco install autoruns
 
 choco install strawberryperl python2 python3
 choco install ruby
+
 choco install texstudio
 choco install sumatrapdf.install
 choco install jabref
 choco isntall imagemagick
 
-choco install 7zip
 choco install nodejs-lts
+
 choco install jsonedit
+
 choco install fiddler4
+
 choco install winmerge
-choco install ack
 
 choco install f.lux
 choco pin add -n=f.lux
+
 choco install teamviewer
+
 choco install vlc
 
 rem enable editing the Outlook auto completion
@@ -132,6 +163,7 @@ rem koppor's very special tools
 choco install pandoc
 choco install xmlstarlet
 choco install jq
+
 choco install synctrayzor
 choco pin add -n=synctrayzor
 
