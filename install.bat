@@ -158,6 +158,8 @@ choco install veracrypt
 
 rem koppor's special tools
 
+choco install discord
+
 choco install foobar2000 opencodecs
 choco install honeyview
 
