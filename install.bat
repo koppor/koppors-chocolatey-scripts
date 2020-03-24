@@ -146,6 +146,8 @@ choco pin add -n=docker-for-windows
 rem This allows to burn ISOs - see https://rufus.akeo.ie/
 choco install rufus
 
+choco install totalcommander
+
 rem requires restart
 choco install adobereader
 
