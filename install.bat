@@ -126,7 +126,7 @@ choco install ruby
 choco install texstudio
 choco install sumatrapdf.install
 choco install jabref
-choco isntall imagemagick
+choco install imagemagick
 
 choco install nodejs-lts
 
