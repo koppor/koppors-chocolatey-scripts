@@ -83,6 +83,8 @@ rem Needs to be installed after a reboot
 rem choco install QTTabBar
 
 choco install notepadplusplus
+choco install vscode.install
+choco pin add -n=vscode.install
 
 rem Advanced search for file names - https://www.voidtools.com/
 choco install everything
