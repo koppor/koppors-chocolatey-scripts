@@ -114,6 +114,7 @@ choco install windirstat
 
 choco install sysinternals
 choco install powertoys
+choco pin add -n=powertoys
 choco install procexp
 choco install procmon
 
