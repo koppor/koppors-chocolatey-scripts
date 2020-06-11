@@ -158,7 +158,9 @@ rem choco install rufus
 choco install totalcommander
 
 rem advanced grep
-choco install ack
+rem better then the alternative "ack"
+rem Hopmepage: https://github.com/ggreer/the_silver_searcher
+choco install ag
 
 rem requires restart
 choco install adobereader
