@@ -30,6 +30,9 @@ rem some color and diff tweaks
 rem   Use SVN's ||| also in git
 rem   See https://git-scm.com/docs/git-config#Documentation/git-config.txt-mergeconflictStyle for details
 git config --global merge.configStyle "diff3"
+rem Always push to the branch we pulled from
+rem   See https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault for details
+git config --global push.default upstream
 git config --global color.diff.new "green bold"
 git config --global color.status.updated "green bold"
 git config --global color.branch.current "green bold"
