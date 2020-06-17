@@ -130,7 +130,7 @@ choco install strawberryperl python2 python3
 choco install ruby
 
 choco install texstudio
-choco install sumatrapdf.install
+choco install sumatrapdf
 choco install jabref
 choco install imagemagick
 
