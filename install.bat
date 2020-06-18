@@ -158,35 +158,36 @@ choco pin add -n=docker-for-windows
 rem This allows to burn ISOs - see https://rufus.akeo.ie/
 rem choco install rufus
 
-choco install totalcommander
+rem choco install totalcommander
 
 rem advanced grep
 rem better then the alternative "ack"
 rem Hopmepage: https://github.com/ggreer/the_silver_searcher
 choco install ag
 
-rem requires restart
 choco install adobereader
+
+choco install font-awesome-font
 
 goto END
 
-rem These packages require manual intervention
+rem This package requires manual intervention
 choco install veracrypt
 
 rem koppor's special tools
 
 choco install discord
 
-choco install foobar2000 opencodecs
-choco install honeyview
+rem choco install foobar2000 opencodecs
+rem choco install honeyview
 
 rem koppor's very special tools
 choco install pandoc
 choco install xmlstarlet
 choco install jq
 
-choco install synctrayzor
-choco pin add -n=synctrayzor
+rem choco install synctrayzor
+rem choco pin add -n=synctrayzor
 
 rem Manually: msys2
 
