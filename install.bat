@@ -71,6 +71,10 @@ rem Enable tabbed terminal
 rem https://conemu.github.io/
 choco install conemu
 
+rem Update from PowerShell 5 to PowerShell 7
+rem See https://docs.microsoft.com/de-de/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7
+choco install powershell-core
+
 rem Enable bash shortcuts
 rem https://mridgers.github.io/clink/
 choco install clink
