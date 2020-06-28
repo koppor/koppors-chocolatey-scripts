@@ -197,6 +197,11 @@ rem Manually: msys2
 
 :END
 
+echo Please start pwsh.exe as administrator and execute following command
+echo Install-Module -Name PowerShellGet -Force
+echo See https://github.com/PowerShell/PSReadLine#psreadline for details
+echo .
+echo .
 echo To keep your system updated, run update-all.bat regularly from an administrator CMD.exe.
 echo .
 echo Please follow the steps described at https://conemu.github.io/en/DefaultTerminal.html#Description
