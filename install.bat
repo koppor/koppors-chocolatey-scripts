@@ -199,6 +199,7 @@ rem Manually: msys2
 
 echo Please start pwsh.exe as administrator and execute following command
 echo Install-Module -Name PowerShellGet -Force
+echo Install-Module PSReadLine -AllowPrerelease -Force
 echo See https://github.com/PowerShell/PSReadLine#psreadline for details
 echo .
 echo .
