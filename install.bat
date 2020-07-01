@@ -40,7 +40,7 @@ rem Sort branches at "git branch -v" by committer date
 git config --global branch.sort -committerdate
 
 rem see https://github.com/github/hub for more information on this git tool
-choco install hub
+rem choco install hub
 
 rem Nice UI from GitHub
 rem Currently not used
@@ -90,15 +90,15 @@ rem Needs to be installed after a reboot
 rem choco install QTTabBar
 
 choco install notepadplusplus
-choco install vscode.install
-choco pin add -n=vscode.install
 
 rem Advanced search for file names - https://www.voidtools.com/
 choco install everything
 
-rem Skype is included in Windows 10 - no need to install it
+rem Skype is included in Windows 10 store - no need to install it
 rem choco install skype
 rem choco pin add -n=skype
+
+choco install microsoft-teams
 
 choco install 7zip
 
@@ -108,6 +108,7 @@ choco pin add -n vscode
 choco install putty.install
 choco install winscp.install
 
+rem AdaoptOpenJDK on stereoids
 choco install libericajdk
 
 choco install jetbrainstoolbox
@@ -128,7 +129,7 @@ choco install procmon
 rem This is interactive - therefore no installation
 rem choco install windowsessentials
 
-choco install autoruns
+rem choco install autoruns
 
 choco install strawberryperl python2 python3
 choco install ruby
