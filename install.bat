@@ -206,6 +206,6 @@ echo Follow the steps described at http://tech.brookins.info/2015/11/07/my-git-s
 echo Install "Snipaste" from the Windows Store
 echo Optional: Install "paint.net" from the Windows Store
 echo Optional: Afterwards, follow the instructions at https://github.com/tj/git-extras/blob/master/Installation.md#windows to install git-extras
-echo Optional: Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template#recommended-setup-of-miktex
+echo Optional: Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template/tree/master/docs#recommended-setup-of-miktex
 echo .
 pause
