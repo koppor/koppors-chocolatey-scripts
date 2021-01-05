@@ -61,7 +61,7 @@ choco install dropbox
 
 choco install keepass
 
-choco install firefox flashplayerplugin
+choco install firefox
 choco pin add -n=firefox
 
 choco install googlechrome
@@ -86,8 +86,12 @@ choco install autohotkey.install
 rem https://github.com/Open-Shell/Open-Shell-Menu
 choco install open-shell
 
+rem Required for advanced Window management
+choco install powertoys
+choco pin add -n=powertoys
+
 rem Needs to be installed after a reboot
-rem choco install QTTabBar
+choco install QTTabBar
 
 choco install notepadplusplus
 
@@ -98,7 +102,7 @@ rem Skype is included in Windows 10 store - no need to install it
 rem choco install skype
 rem choco pin add -n=skype
 
-choco install microsoft-teams
+rem choco install microsoft-teams
 
 choco install 7zip
 
@@ -108,8 +112,8 @@ choco pin add -n vscode
 choco install putty.install
 choco install winscp.install
 
-rem AdaoptOpenJDK on stereoids
-choco install libericajdk
+rem AdoptOpenJDK on stereoids
+choco install libericajdk-full
 
 choco install jetbrainstoolbox
 choco pin add -n=jetbrainstoolbox
@@ -121,8 +125,6 @@ choco install lockhunter
 choco install windirstat
 
 choco install sysinternals
-choco install powertoys
-choco pin add -n=powertoys
 choco install procexp
 choco install procmon
 
@@ -132,7 +134,7 @@ rem choco install windowsessentials
 rem choco install autoruns
 
 choco install strawberryperl python2 python3
-choco install ruby
+rem choco install ruby
 
 choco install texstudio
 choco install sumatrapdf
@@ -141,11 +143,11 @@ choco install imagemagick
 
 choco install nodejs-lts
 
-choco install jsonedit
+rem choco install jsonedit
 
-choco install fiddler4
+rem choco install fiddler4
 
-choco install winmerge
+rem choco install winmerge
 
 choco install f.lux
 choco pin add -n=f.lux
@@ -155,7 +157,7 @@ choco install teamviewer
 choco install vlc
 
 rem enable editing the Outlook auto completion
-choco install nk2edit.install
+rem choco install nk2edit.install
 
 choco install docker-for-windows 
 choco pin add -n=docker-for-windows 
@@ -170,26 +172,27 @@ rem better then the alternative "ack"
 rem Hopmepage: https://github.com/ggreer/the_silver_searcher
 choco install ag
 
+rem advanced find
+rem Homepage: https://github.com/sharkdp/fd
+choco install fd
+
 choco install adobereader
 
 choco install font-awesome-font
 
-goto END
-
 rem This package requires manual intervention
 choco install veracrypt
 
-rem koppor's special tools
-
 choco install discord
 
-rem choco install foobar2000 opencodecs
-rem choco install honeyview
-
-rem koppor's very special tools
 choco install pandoc
 choco install xmlstarlet
 choco install jq
+
+rem koppor's special tools
+
+rem choco install foobar2000 opencodecs
+rem choco install honeyview
 
 rem choco install synctrayzor
 rem choco pin add -n=synctrayzor
