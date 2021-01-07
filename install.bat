@@ -19,6 +19,30 @@ echo Now chocolatey should be ready and we can go ahead
 echo .
 pause
 
+choco install dropbox
+
+choco install keepass
+
+choco install firefox
+choco pin add -n=firefox
+
+choco install googlechrome
+choco pin add -n=googlechrome
+
+rem Required for advanced Window management
+choco install powertoys
+choco pin add -n=powertoys
+
+rem Enable tabbed terminal
+rem https://conemu.github.io/
+choco install conemu
+
+rem Enable bash shortcuts
+rem https://mridgers.github.io/clink/
+choco install clink
+rem enable normal files also to be treated as executable - see https://github.com/mridgers/clink/issues/311#issuecomment-95330570
+rem clink set exec_match_style -1
+
 choco install git.install -y --params "/GitAndUnixToolsOnPath /NoAutoCrlf /WindowsTerminal"
 call refreshenv
 rem always have Linux line endings in text files
@@ -39,6 +63,10 @@ git config --global color.branch.current "green bold"
 rem Sort branches at "git branch -v" by committer date
 git config --global branch.sort -committerdate
 
+rem Update from PowerShell 5 to PowerShell 7
+rem See https://docs.microsoft.com/de-de/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7
+choco install powershell-core
+
 rem see https://github.com/github/hub for more information on this git tool
 rem choco install hub
 
@@ -57,41 +85,10 @@ rem choco install poshgit
 rem In case one (still) owns SVN repositories
 rem choco install tortoisesvn
 
-choco install dropbox
-
-choco install keepass
-
-choco install firefox
-choco pin add -n=firefox
-
-choco install googlechrome
-choco pin add -n=googlechrome
-
-rem Enable tabbed terminal
-rem https://conemu.github.io/
-choco install conemu
-
-rem Update from PowerShell 5 to PowerShell 7
-rem See https://docs.microsoft.com/de-de/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7
-choco install powershell-core
-
-rem Enable bash shortcuts
-rem https://mridgers.github.io/clink/
-choco install clink
-rem enable normal files also to be treated as executable - see https://github.com/mridgers/clink/issues/311#issuecomment-95330570
-rem clink set exec_match_style -1
-
 choco install autohotkey.install
 
 rem https://github.com/Open-Shell/Open-Shell-Menu
 choco install open-shell
-
-rem Required for advanced Window management
-choco install powertoys
-choco pin add -n=powertoys
-
-rem Needs to be installed after a reboot
-choco install QTTabBar
 
 choco install notepadplusplus
 
@@ -160,7 +157,7 @@ rem enable editing the Outlook auto completion
 rem choco install nk2edit.install
 
 choco install docker-for-windows 
-choco pin add -n=docker-for-windows 
+choco pin add -n=docker-for-windows
 
 rem This allows to burn ISOs - see https://rufus.akeo.ie/
 rem choco install rufus
@@ -180,9 +177,6 @@ choco install adobereader
 
 choco install font-awesome-font
 
-rem This package requires manual intervention
-choco install veracrypt
-
 choco install discord
 
 choco install pandoc
@@ -198,6 +192,13 @@ rem choco install synctrayzor
 rem choco pin add -n=synctrayzor
 
 rem Manually: msys2
+
+rem This package requires manual intervention
+choco install veracrypt
+
+rem Requieres a reboot directly after installation
+rem Otherwise, Windows does not recognize a click any more
+choco install QTTabBar
 
 :END
 
