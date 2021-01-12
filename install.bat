@@ -31,7 +31,6 @@ choco pin add -n=googlechrome
 
 rem Required for advanced Window management
 choco install powertoys
-choco pin add -n=powertoys
 
 rem Enable tabbed terminal
 rem https://conemu.github.io/
@@ -156,8 +155,8 @@ choco install vlc
 rem enable editing the Outlook auto completion
 rem choco install nk2edit.install
 
-choco install docker-for-windows 
-choco pin add -n=docker-for-windows
+choco install docker-desktop
+choco pin add -n=docker-desktop
 
 rem This allows to burn ISOs - see https://rufus.akeo.ie/
 rem choco install rufus
