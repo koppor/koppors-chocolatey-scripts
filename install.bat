@@ -102,6 +102,10 @@ rem choco install microsoft-teams
 
 choco install 7zip
 
+rem Context menu for Windows Explorer to offer "Copy Unix Path", "Copy Long UNC Path", ...
+rem https://pathcopycopy.github.io/
+choco install path-copy-copy
+
 choco install vscode
 choco pin add -n vscode
 
