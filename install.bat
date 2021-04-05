@@ -183,14 +183,25 @@ choco install font-awesome-font
 choco install discord
 
 choco install pandoc
+
 choco install xmlstarlet
+
 choco install jq
 
-rem koppor's special tools
+rem Tool for renaming pictures according to EXIF date
+choco install exiftool
 
+rem Advanced copy tool
+rem Homepage: https://www.codesector.com/teracopy
+rem choco install teracopy
+
+rem music player
 rem choco install foobar2000 opencodecs
+
+rem picture viewer
 rem choco install honeyview
 
+rem peer-to-peer file share
 rem choco install synctrayzor
 rem choco pin add -n=synctrayzor
 
