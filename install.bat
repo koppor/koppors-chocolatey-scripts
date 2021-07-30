@@ -207,6 +207,10 @@ rem choco pin add -n=synctrayzor
 
 rem Manually: msys2
 
+rem Free file-based encryption for the cloud
+rem See https://cryptomator.org/ for details
+choco install cryptomator
+
 rem This package requires manual intervention
 choco install veracrypt
 
