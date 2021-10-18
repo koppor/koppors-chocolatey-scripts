@@ -113,7 +113,7 @@ choco install putty.install
 choco install winscp.install
 
 rem AdoptOpenJDK on stereoids
-choco install libericajdk-full
+choco install libericajdkfull
 
 choco install jetbrainstoolbox
 choco pin add -n=jetbrainstoolbox
