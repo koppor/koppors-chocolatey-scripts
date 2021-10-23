@@ -37,8 +37,8 @@ rem https://conemu.github.io/
 choco install conemu
 
 rem Enable bash shortcuts
-rem https://mridgers.github.io/clink/
-choco install clink
+rem https://chrisant996.github.io/clink/
+choco install clink-maintained
 rem enable normal files also to be treated as executable - see https://github.com/mridgers/clink/issues/311#issuecomment-95330570
 rem clink set exec_match_style -1
 
