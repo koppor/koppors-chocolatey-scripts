@@ -87,7 +87,7 @@ rem choco install tortoisesvn
 choco install autohotkey.install
 
 rem https://github.com/Open-Shell/Open-Shell-Menu
-choco install open-shell
+rem choco install open-shell
 
 choco install notepadplusplus
 
