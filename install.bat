@@ -133,7 +133,7 @@ rem choco install windowsessentials
 
 rem choco install autoruns
 
-choco install strawberryperl python2 python3
+choco install strawberryperl python3
 rem choco install ruby
 
 choco install texstudio
