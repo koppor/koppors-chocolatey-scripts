@@ -68,6 +68,7 @@ choco install powershell-core
 
 rem see https://github.com/github/hub for more information on this git tool
 rem choco install hub
+choco install gh
 
 rem Nice UI from GitHub
 rem Currently not used
