@@ -50,15 +50,17 @@ rem support more than 260 characters on Windows
 rem See https://stackoverflow.com/a/22575737/873282 for details
 git config --global core.longpaths true
 rem some color and diff tweaks
-rem   Use SVN's ||| also in git
+rem   Use SVN's ||| also in git - and remove matching lines in the conflict region
 rem   See https://git-scm.com/docs/git-config#Documentation/git-config.txt-mergeconflictStyle for details
-git config --global merge.configStyle "diff3"
+git config --global merge.configStyle "zdiff3"
 rem Always push to the branch we pulled from
 rem   See https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault for details
-git config --global push.default upstream
-git config --global color.diff.new "green bold"
-git config --global color.status.updated "green bold"
-git config --global color.branch.current "green bold"
+git config --global push.default current
+rem  Source: https://stackoverflow.com/a/72401899/873282
+git config --global push.autoSetupRemote true
+rem  Colors in output
+rem  Source: https://unix.stackexchange.com/a/44297/18033
+git config --global color.ui auto
 rem Sort branches at "git branch -v" by committer date
 git config --global branch.sort -committerdate
 
