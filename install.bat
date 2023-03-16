@@ -48,7 +48,8 @@ rem enable normal files also to be treated as executable - see https://github.co
 rem otherwise, you have to add a space before the filename
 rem clink set exec_match_style -1
 
-choco install git.install -y --params "/GitAndUnixToolsOnPath /NoAutoCrlf /WindowsTerminal"
+rem All arguments are listed at https://github.com/chocolatey-community/chocolatey-packages/blob/master/automatic/git.install/ARGUMENTS.md
+choco install git.install -y --params "/GitAndUnixToolsOnPath /WindowsTerminal /WindowsTerminalProfile /Editor:VisualStudioCode"
 call refreshenv
 rem always have Linux line endings in text files
 git config --global core.autocrlf input
