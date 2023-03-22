@@ -143,7 +143,11 @@ rem choco install windowsessentials
 
 rem choco install autoruns
 
-choco install strawberryperl python3
+choco install python3
+# alternatively
+choco install anaconda3 --params '"/AddToPath /JustMe"'
+
+rem choco install strawberryperl
 rem choco install ruby
 
 choco install texstudio
