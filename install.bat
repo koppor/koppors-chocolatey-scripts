@@ -119,6 +119,10 @@ choco install path-copy-copy
 choco install vscode
 choco pin add -n vscode
 
+rem Fonts
+choco install dejavufonts
+choco install victormononf
+
 choco install putty.install
 choco install winscp.install
 
