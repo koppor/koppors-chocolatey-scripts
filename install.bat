@@ -70,6 +70,8 @@ rem  Source: https://unix.stackexchange.com/a/44297/18033
 git config --global color.ui auto
 rem Sort branches at "git branch -v" by committer date
 git config --global branch.sort -committerdate
+rem tabs are 4 spaces wide
+git config --global gui.tabsize 4
 
 rem Update from PowerShell 5 to PowerShell 7
 rem See https://docs.microsoft.com/de-de/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7
