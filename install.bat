@@ -238,12 +238,16 @@ rem choco install veracrypt
 rem QDir
 rem Advanced File Explorer
 rem https://community.chocolatey.org/packages/qdir
-choco install qdir
+rem choco install qdir
 
 rem Tabbed File Explorer via QTTabBar
 rem Requieres a reboot directly after installation
 rem Otherwise, Windows does not recognize a click any more
 rem choco install QTTabBar
+
+rem For Windows 11: Tweaker for Windows Explorer
+rem Not installable via Chocolatey, but via winget
+winget install --id=valinet.ExplorerPatcher  -e
 
 :END
 
