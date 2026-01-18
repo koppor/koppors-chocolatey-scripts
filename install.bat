@@ -39,7 +39,8 @@ choco pin add -n=powertoys
 
 rem Enable tabbed terminal
 rem https://conemu.github.io/
-choco install conemu
+rem Disabled, because Windows Terminal is now "good enough"
+rem choco install conemu
 
 rem Enable bash shortcuts
 rem https://chrisant996.github.io/clink/
@@ -248,6 +249,10 @@ rem choco install QTTabBar
 rem For Windows 11: Tweaker for Windows Explorer
 rem Not installable via Chocolatey, but via winget
 winget install --id=valinet.ExplorerPatcher  -e
+
+rem Install WLAN Monitor
+rem https://github.com/emoacht/Wifinian
+winget install Wifinian
 
 :END
 
