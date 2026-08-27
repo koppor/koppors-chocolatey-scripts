@@ -24,6 +24,10 @@ echo Updating all cargo packages...
 rem requires  cargo install cargo-update
 cargo install-update -a
 
+echo Updating gwq...
+rem gwq is not available via chocolatey or winget
+go install github.com/d-kuro/gwq/cmd/gwq@latest
+
 echo Updating all MiKTeX packages...
 call mpm --verbose --update-db
 call mpm --verbose --update

@@ -82,6 +82,23 @@ rem see https://github.com/github/hub for more information on this git tool
 rem choco install hub
 choco install gh
 
+rem Go - required to install gwq
+choco install golang
+call refreshenv
+
+rem ghq - remote repository management - https://github.com/x-motemen/ghq
+winget install --id=x-motemen.ghq -e
+rem clone all repositories below c:\git-repositories
+git config --global ghq.root c:/git-repositories
+
+rem gwq - git worktree manager - https://github.com/d-kuro/gwq
+rem not available via chocolatey or winget, thus installed with go
+go install github.com/d-kuro/gwq/cmd/gwq@latest
+rem put worktrees next to the ghq clones - c:\git-repositories\host\owner\repository=branch
+rem gwq is not on the PATH yet, thus it is called with its full path
+"%USERPROFILE%\go\bin\gwq.exe" config set worktree.basedir "c:/git-repositories"
+"%USERPROFILE%\go\bin\gwq.exe" config set naming.template "{{.Host}}/{{.Owner}}/{{.Repository}}={{.Branch}}"
+
 rem Nice UI from GitHub
 rem Currently not used
 rem choco install github-desktop
