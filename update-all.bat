@@ -24,6 +24,9 @@ echo Updating all cargo packages...
 rem requires  cargo install cargo-update
 cargo install-update -a
 
+echo Updating all gh extensions...
+gh extension upgrade --all
+
 echo Updating gwq...
 rem gwq is not available via chocolatey or winget
 go install github.com/d-kuro/gwq/cmd/gwq@latest

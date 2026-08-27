@@ -81,6 +81,10 @@ choco install powershell-core
 rem see https://github.com/github/hub for more information on this git tool
 rem choco install hub
 choco install gh
+call refreshenv
+
+rem gh-worktree - checkout pull requests and branches into separate git worktrees - https://github.com/knqyf263/gh-worktree
+gh extension install knqyf263/gh-worktree
 
 rem Go - required to install gwq
 choco install golang
