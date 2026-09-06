@@ -19,11 +19,19 @@ echo Now chocolatey should be ready and we can go ahead
 echo .
 pause
 
+rem For Windows 11: Tweaker for Windows Explorer
+rem Not installable via Chocolatey, but via winget
+winget install --id=valinet.ExplorerPatcher  -e
+
+rem Required for advanced Window management
+choco install powertoys
+choco pin add -n=powertoys
+
 rem enable clicking on choco:// links in the browser
 rem https://community.chocolatey.org/packages/choco-protocol-support
 rem choco install choco-protocol-support
 
-choco install dropbox
+rem choco install dropbox
 
 choco install keepass
 
@@ -32,10 +40,6 @@ choco pin add -n=firefox
 
 choco install googlechrome
 choco pin add -n=googlechrome
-
-rem Required for advanced Window management
-choco install powertoys
-choco pin add -n=powertoys
 
 rem Enable tabbed terminal
 rem https://conemu.github.io/
@@ -146,6 +150,7 @@ choco pin add -n vscode
 rem Fonts
 choco install dejavufonts
 choco install victormononf
+choco install font-awesome-font
 
 choco install putty.install
 choco install winscp.install
@@ -173,13 +178,15 @@ rem choco install autoruns
 
 choco install python3
 # alternatively
-choco install anaconda3 --params '"/AddToPath /JustMe"'
+# choco install anaconda3 --params '"/AddToPath /JustMe"'
 
 rem choco install strawberryperl
 rem choco install ruby
 
-choco install texstudio
 choco install sumatrapdf
+choco install adobereader
+
+choco install texstudio
 choco install jabref
 choco install imagemagick
 
@@ -217,10 +224,6 @@ choco install ag
 rem advanced find
 rem Homepage: https://github.com/sharkdp/fd
 choco install fd
-
-choco install adobereader
-
-choco install font-awesome-font
 
 choco install discord
 
@@ -267,10 +270,6 @@ rem Requieres a reboot directly after installation
 rem Otherwise, Windows does not recognize a click any more
 rem choco install QTTabBar
 
-rem For Windows 11: Tweaker for Windows Explorer
-rem Not installable via Chocolatey, but via winget
-winget install --id=valinet.ExplorerPatcher  -e
-
 rem Install WLAN Monitor
 rem https://github.com/emoacht/Wifinian
 winget install Wifinian
@@ -282,9 +281,8 @@ echo .
 echo Please follow the steps described at https://conemu.github.io/en/DefaultTerminal.html#Description
 echo .
 echo Follow the steps described at http://tech.brookins.info/2015/11/07/my-git-setup-in-windows.html to get git running with putty and an SSH key
-echo Install "Snipaste" from the Windows Store
-echo Optional: Install "paint.net" from the Windows Store
 echo Optional: Afterwards, follow the instructions at https://github.com/tj/git-extras/blob/master/Installation.md#windows to install git-extras
+echo Optional: Install "paint.net" from the Windows Store
 echo Optional: Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template/tree/master/docs#recommended-setup-of-miktex
 echo .
 pause
