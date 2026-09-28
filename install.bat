@@ -21,11 +21,11 @@ pause
 
 rem For Windows 11: Tweaker for Windows Explorer
 rem Not installable via Chocolatey, but via winget
-winget install --id=valinet.ExplorerPatcher  -e
+winget install --id=valinet.ExplorerPatcher -e
 
 rem Required for advanced Window management
-choco install powertoys
-choco pin add -n=powertoys
+winget install --id Microsoft.PowerToys -e --source winget
+winget pin add --id Microsoft.PowerToys -e
 
 rem enable clicking on choco:// links in the browser
 rem https://community.chocolatey.org/packages/choco-protocol-support
@@ -35,11 +35,11 @@ rem choco install dropbox
 
 choco install keepass
 
-choco install firefox
-choco pin add -n=firefox
+winget install --id Mozilla.Firefox -e --source winget
+winget pin add --id Mozilla.Firefox -e --blocking
 
-choco install googlechrome
-choco pin add -n=googlechrome
+winget install --id Google.Chrome -e --source winget
+winget pin add --id Google.Chrome -e --blocking
 
 rem Enable tabbed terminal
 rem https://conemu.github.io/
@@ -158,8 +158,8 @@ choco install winscp.install
 rem AdoptOpenJDK on stereoids
 choco install libericajdkfull
 
-choco install jetbrainstoolbox
-choco pin add -n=jetbrainstoolbox
+winget install --id JetBrains.Toolbox -e --source winget
+winget pin add --id JetBrains.Toolbox -e --blocking
 
 rem choco install pdfcreator
 
