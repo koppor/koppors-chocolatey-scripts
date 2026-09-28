@@ -184,6 +184,8 @@ rem choco install autoruns
 rem Python Install Manager - manages Python versions via the "py" command - https://github.com/python/pymanager
 winget install --id Python.PythonInstallManager -e --source winget --accept-source-agreements --accept-package-agreements
 rem install the latest Python version
+rem Not done here, because Python is installed per user - and this script runs as administrator
+rem Instruction to run it manually is output at the end
 rem py install default
 rem alternatively
 rem choco install anaconda3 --params '"/AddToPath /JustMe"'
@@ -291,6 +293,7 @@ echo Please follow the steps described at https://conemu.github.io/en/DefaultTer
 echo .
 echo Follow the steps described at http://tech.brookins.info/2015/11/07/my-git-setup-in-windows.html to get git running with putty and an SSH key
 echo Optional: Afterwards, follow the instructions at https://github.com/tj/git-extras/blob/master/Installation.md#windows to install git-extras
+echo Install Python: Open a non-administrator cmd.exe and run "py install default"
 echo Optional: Install "paint.net" from the Windows Store
 echo Optional: Install MikTeX by following https://github.com/latextemplates/scientific-thesis-template/tree/master/docs#recommended-setup-of-miktex
 echo .
