@@ -178,10 +178,12 @@ rem choco install windowsessentials
 
 rem choco install autoruns
 
-rem Kept at chocolatey, because winget only offers version-specific packages (e.g., Python.Python.3.13)
-choco install python3
-# alternatively
-# choco install anaconda3 --params '"/AddToPath /JustMe"'
+rem Python Install Manager - manages Python versions via the "py" command - https://github.com/python/pymanager
+winget install --id Python.PythonInstallManager -e --source winget --accept-source-agreements --accept-package-agreements
+rem install the latest Python version
+py install default
+rem alternatively
+rem choco install anaconda3 --params '"/AddToPath /JustMe"'
 
 rem choco install strawberryperl
 rem choco install ruby
