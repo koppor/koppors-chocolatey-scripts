@@ -21,10 +21,10 @@ pause
 
 rem For Windows 11: Tweaker for Windows Explorer
 rem Not installable via Chocolatey, but via winget
-winget install --id=valinet.ExplorerPatcher -e
+winget install --id=valinet.ExplorerPatcher -e --accept-source-agreements --accept-package-agreements
 
 rem Required for advanced Window management
-winget install --id Microsoft.PowerToys -e --source winget
+winget install --id Microsoft.PowerToys -e --source winget --accept-source-agreements --accept-package-agreements
 winget pin add --id Microsoft.PowerToys -e
 
 rem enable clicking on choco:// links in the browser
@@ -33,12 +33,12 @@ rem choco install choco-protocol-support
 
 rem choco install dropbox
 
-choco install keepass
+winget install --id DominikReichl.KeePass -e --source winget --accept-source-agreements --accept-package-agreements
 
-winget install --id Mozilla.Firefox -e --source winget
+winget install --id Mozilla.Firefox -e --source winget --accept-source-agreements --accept-package-agreements
 winget pin add --id Mozilla.Firefox -e --blocking
 
-winget install --id Google.Chrome -e --source winget
+winget install --id Google.Chrome -e --source winget --accept-source-agreements --accept-package-agreements
 winget pin add --id Google.Chrome -e --blocking
 
 rem Enable tabbed terminal
@@ -48,11 +48,12 @@ rem choco install conemu
 
 rem Enable bash shortcuts
 rem https://chrisant996.github.io/clink/
-choco install clink-maintained
+winget install --id chrisant996.Clink -e --source winget --accept-source-agreements --accept-package-agreements
 rem enable normal files also to be treated as executable - see https://github.com/mridgers/clink/issues/311#issuecomment-95330570
 rem otherwise, you have to add a space before the filename
 rem clink set exec_match_style -1
 
+rem Kept at chocolatey, because winget does not support these installer parameters
 rem All arguments are listed at https://github.com/chocolatey-community/chocolatey-packages/blob/master/automatic/git.install/ARGUMENTS.md
 choco install git.install -y --params "/GitAndUnixToolsOnPath /WindowsTerminal /WindowsTerminalProfile /Editor:VisualStudioCode"
 call refreshenv
@@ -80,22 +81,22 @@ git config --global gui.tabsize 4
 
 rem Update from PowerShell 5 to PowerShell 7
 rem See https://docs.microsoft.com/de-de/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7
-choco install powershell-core
+winget install --id Microsoft.PowerShell -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem see https://github.com/github/hub for more information on this git tool
 rem choco install hub
-choco install gh
+winget install --id GitHub.cli -e --source winget --accept-source-agreements --accept-package-agreements
 call refreshenv
 
 rem gh-worktree - checkout pull requests and branches into separate git worktrees - https://github.com/knqyf263/gh-worktree
 gh extension install knqyf263/gh-worktree
 
 rem Go - required to install gwq
-choco install golang
+winget install --id GoLang.Go -e --source winget --accept-source-agreements --accept-package-agreements
 call refreshenv
 
 rem ghq - remote repository management - https://github.com/x-motemen/ghq
-winget install --id=x-motemen.ghq -e
+winget install --id=x-motemen.ghq -e --accept-source-agreements --accept-package-agreements
 rem clone all repositories below c:\git-repositories
 git config --global ghq.root c:/git-repositories
 
@@ -122,15 +123,15 @@ rem choco install poshgit
 rem In case one (still) owns SVN repositories
 rem choco install tortoisesvn
 
-choco install autohotkey.install
+winget install --id AutoHotkey.AutoHotkey -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem https://github.com/Open-Shell/Open-Shell-Menu
 rem choco install open-shell
 
-choco install notepadplusplus
+winget install --id Notepad++.Notepad++ -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem Advanced search for file names - https://www.voidtools.com/
-choco install everything
+winget install --id voidtools.Everything -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem Skype is included in Windows 10 store - no need to install it
 rem choco install skype
@@ -138,44 +139,46 @@ rem choco pin add -n=skype
 
 rem choco install microsoft-teams
 
-choco install 7zip
+winget install --id 7zip.7zip -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem Context menu for Windows Explorer to offer "Copy Unix Path", "Copy Long UNC Path", ...
 rem https://pathcopycopy.github.io/
-choco install path-copy-copy
+winget install --id CLechasseur.PathCopyCopy -e --source winget --accept-source-agreements --accept-package-agreements
 
-choco install vscode
-choco pin add -n vscode
+winget install --id Microsoft.VisualStudioCode -e --source winget --accept-source-agreements --accept-package-agreements
+winget pin add --id Microsoft.VisualStudioCode -e --blocking
 
-rem Fonts
+rem Fonts - not available via winget
 choco install dejavufonts
 choco install victormononf
 choco install font-awesome-font
 
-choco install putty.install
-choco install winscp.install
+winget install --id PuTTY.PuTTY -e --source winget --accept-source-agreements --accept-package-agreements
+winget install --id WinSCP.WinSCP -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem AdoptOpenJDK on stereoids
+rem Kept at chocolatey, because winget only offers version-specific packages (e.g., BellSoft.LibericaJDK.25.Full)
 choco install libericajdkfull
 
-winget install --id JetBrains.Toolbox -e --source winget
+winget install --id JetBrains.Toolbox -e --source winget --accept-source-agreements --accept-package-agreements
 winget pin add --id JetBrains.Toolbox -e --blocking
 
 rem choco install pdfcreator
 
-choco install lockhunter
+winget install --id CrystalRich.LockHunter -e --source winget --accept-source-agreements --accept-package-agreements
 
-choco install windirstat
+winget install --id WinDirStat.WinDirStat -e --source winget --accept-source-agreements --accept-package-agreements
 
-choco install sysinternals
-choco install procexp
-choco install procmon
+winget install --id Microsoft.Sysinternals.Suite -e --source winget --accept-source-agreements --accept-package-agreements
+winget install --id Microsoft.Sysinternals.ProcessExplorer -e --source winget --accept-source-agreements --accept-package-agreements
+winget install --id Microsoft.Sysinternals.ProcessMonitor -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem This is interactive - therefore no installation
 rem choco install windowsessentials
 
 rem choco install autoruns
 
+rem Kept at chocolatey, because winget only offers version-specific packages (e.g., Python.Python.3.13)
 choco install python3
 # alternatively
 # choco install anaconda3 --params '"/AddToPath /JustMe"'
@@ -183,14 +186,14 @@ choco install python3
 rem choco install strawberryperl
 rem choco install ruby
 
-choco install sumatrapdf
-choco install adobereader
+winget install --id SumatraPDF.SumatraPDF -e --source winget --accept-source-agreements --accept-package-agreements
+winget install --id Adobe.Acrobat.Reader.64-bit -e --source winget --accept-source-agreements --accept-package-agreements
 
-choco install texstudio
-choco install jabref
-choco install imagemagick
+winget install --id TeXstudio.TeXstudio -e --source winget --accept-source-agreements --accept-package-agreements
+winget install --id JabRef.JabRef -e --source winget --accept-source-agreements --accept-package-agreements
+winget install --id ImageMagick.ImageMagick -e --source winget --accept-source-agreements --accept-package-agreements
 
-choco install nodejs-lts
+winget install --id OpenJS.NodeJS.LTS -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem choco install jsonedit
 
@@ -198,18 +201,18 @@ rem choco install fiddler4
 
 rem choco install winmerge
 
-choco install f.lux
-choco pin add -n=f.lux
+winget install --id flux.flux -e --source winget --accept-source-agreements --accept-package-agreements
+winget pin add --id flux.flux -e --blocking
 
-choco install teamviewer
+winget install --id TeamViewer.TeamViewer -e --source winget --accept-source-agreements --accept-package-agreements
 
-choco install vlc
+winget install --id VideoLAN.VLC -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem enable editing the Outlook auto completion
 rem choco install nk2edit.install
 
-choco install docker-desktop
-choco pin add -n=docker-desktop
+winget install --id Docker.DockerDesktop -e --source winget --accept-source-agreements --accept-package-agreements
+winget pin add --id Docker.DockerDesktop -e --blocking
 
 rem This allows to burn ISOs - see https://rufus.akeo.ie/
 rem choco install rufus
@@ -219,22 +222,23 @@ rem choco install totalcommander
 rem advanced grep
 rem better then the alternative "ack"
 rem Hopmepage: https://github.com/ggreer/the_silver_searcher
-choco install ag
+winget install --id JFLarvoire.Ag -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem advanced find
 rem Homepage: https://github.com/sharkdp/fd
-choco install fd
+winget install --id sharkdp.fd -e --source winget --accept-source-agreements --accept-package-agreements
 
-choco install discord
+winget install --id Discord.Discord -e --source winget --accept-source-agreements --accept-package-agreements
 
-choco install pandoc
+winget install --id JohnMacFarlane.Pandoc -e --source winget --accept-source-agreements --accept-package-agreements
 
+rem not available via winget
 choco install xmlstarlet
 
-choco install jq
+winget install --id jqlang.jq -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem Tool for renaming pictures according to EXIF date
-choco install exiftool
+winget install --id OliverBetz.ExifTool -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem Advanced copy tool
 rem Homepage: https://www.codesector.com/teracopy
@@ -254,7 +258,7 @@ rem Manually: msys2
 
 rem Free file-based encryption for the cloud
 rem See https://cryptomator.org/ for details
-choco install cryptomator
+winget install --id Cryptomator.Cryptomator -e --source winget --accept-source-agreements --accept-package-agreements
 
 rem VeraCrypt
 rem This package requires manual intervention
@@ -272,7 +276,7 @@ rem choco install QTTabBar
 
 rem Install WLAN Monitor
 rem https://github.com/emoacht/Wifinian
-winget install Wifinian
+winget install Wifinian --accept-source-agreements --accept-package-agreements
 
 :END
 
