@@ -181,7 +181,7 @@ rem choco install autoruns
 rem Python Install Manager - manages Python versions via the "py" command - https://github.com/python/pymanager
 winget install --id Python.PythonInstallManager -e --source winget --accept-source-agreements --accept-package-agreements
 rem install the latest Python version
-py install default
+rem py install default
 rem alternatively
 rem choco install anaconda3 --params '"/AddToPath /JustMe"'
 
