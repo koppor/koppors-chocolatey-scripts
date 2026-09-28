@@ -108,6 +108,9 @@ rem gwq is not on the PATH yet, thus it is called with its full path
 "%USERPROFILE%\go\bin\gwq.exe" config set worktree.basedir "c:/git-repositories"
 "%USERPROFILE%\go\bin\gwq.exe" config set naming.template "{{.Host}}/{{.Owner}}/{{.Repository}}={{.Branch}}"
 
+rem lazygit - terminal UI for git - https://github.com/jesseduffield/lazygit
+winget install --id JesseDuffield.lazygit -e --source winget --accept-source-agreements --accept-package-agreements
+
 rem Nice UI from GitHub
 rem Currently not used
 rem choco install github-desktop
