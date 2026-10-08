@@ -65,7 +65,7 @@ git config --global core.longpaths true
 rem some color and diff tweaks
 rem   Use SVN's ||| also in git - and remove matching lines in the conflict region
 rem   See https://git-scm.com/docs/git-config#Documentation/git-config.txt-mergeconflictStyle for details
-git config --global merge.configStyle "zdiff3"
+git config --global merge.conflictStyle "zdiff3"
 rem Always push to the branch we pulled from
 rem   See https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault for details
 git config --global push.default current
